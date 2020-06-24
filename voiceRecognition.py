@@ -1,5 +1,3 @@
-#STILL A WORK IN PROGRESS, ADDING A WAKE FEATURE SOON
-
 import speech_recognition as sr
 import playsound  # to play saved mp3 file
 from gtts import gTTS  # google text to speech
@@ -8,7 +6,6 @@ from selenium import webdriver
 from pynput.keyboard import Key, Controller, Listener
 import requests
 keyboard = Controller()
-
 
 num = 1
 
@@ -50,7 +47,7 @@ def get_audio():
 
     except:
 
-        assistant_speaks("Could not understand your audio, PLease try again !")
+        assistant_speaks("Could not understand your audio, Please try again !")
         return 0
 
 def enter():
@@ -82,7 +79,7 @@ def search_website():
     driver.get('http://www.google.com')
     newtab()
     assistant_speaks("Alright! What website would you like to search?")
-    website_search = get_audio()
+    website_search = get_audio().lower()
     if website_search == "youtube":
         keyboard.type("https://www.youtube.com")
     elif website_search == "amazon":
@@ -94,11 +91,6 @@ def search_website():
 
 # Driver Code
 if __name__ == "__main__":
-    assistant_speaks("What's your name, Human?")
-    #name = 'Human'
-    name = get_audio()
-    assistant_speaks("Hello, " + name + '.')
-
     while (1):
 
         assistant_speaks("What can I do for you?")
@@ -109,9 +101,8 @@ if __name__ == "__main__":
 
         if "search" in str(text):
             search()
-        elif "scan website" in str(text):
+        elif "website" in str(text):
             search_website()
         elif "exit" in str(text) or "bye" in str(text) or "sleep" in str(text):
             assistant_speaks("Ok bye, " + name + '.')
             break
-
