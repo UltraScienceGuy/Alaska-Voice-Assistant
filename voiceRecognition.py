@@ -115,7 +115,7 @@ while num ==1:
 
     with sr.Microphone() as source:
         print("Speak...")
-        audio = rObject.listen(source, phrase_time_limit=10000000000000000000000000000)
+        audio = rObject.listen(source)
 
         text = rObject.recognize_google(audio, language='en-US')
         print("You : ", text)
