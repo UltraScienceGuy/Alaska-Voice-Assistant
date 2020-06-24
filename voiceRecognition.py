@@ -9,7 +9,6 @@ keyboard = Controller()
 
 num = 1
 
-executable_letters = ["t"]
 def assistant_speaks(output):
     global num
 
@@ -54,6 +53,9 @@ def enter():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
 
+
+
+        
 def newtab():
     with keyboard.pressed(Key.ctrl):
         keyboard.press("t")
@@ -76,33 +78,47 @@ def search():
 def search_website():
     PATH = 'C:\Program Files (x86)\chromedriver.exe'
     driver = webdriver.Chrome(PATH)
-    driver.get('http://www.google.com')
-    newtab()
     assistant_speaks("Alright! What website would you like to search?")
     website_search = get_audio().lower()
-    if website_search == "youtube":
-        keyboard.type("https://www.youtube.com")
-    elif website_search == "amazon":
-        keyboard.type("https://www.amazon.com")
-    assistant_speaks("What is the phrase you would like to enter?")
+    driver.get("https://amazon.com")
+    search_bar = driver.find_element_by_name("field-keywords")
+    assistant_speaks("What would you like to search for?")
     search_term = get_audio()
-    keyboard.type(search_term)
+    search_bar.send_keys(search_term)
     enter()
 
 # Driver Code
-if __name__ == "__main__":
-    while (1):
 
-        assistant_speaks("What can I do for you?")
-        text = get_audio().lower()
+def driver_code():
+    if __name__ == "__main__":
+        while (1):
 
-        if text == 0:
-            continue
+            assistant_speaks("What can I do for you?")
+            text = get_audio().lower()
 
-        if "search" in str(text):
-            search()
-        elif "website" in str(text):
-            search_website()
-        elif "exit" in str(text) or "bye" in str(text) or "sleep" in str(text):
-            assistant_speaks("Ok bye, " + name + '.')
-            break
+            if text == 0:
+                continue
+
+            if "search" in str(text):
+                search()
+            elif "website" in str(text):
+                search_website()
+            elif "exit" in str(text) or "bye" in str(text) or "sleep" in str(text):
+                assistant_speaks("Ok bye, " + name + '.')
+                break
+
+
+num = 1
+
+while num ==1:
+    rObject = sr.Recognizer()
+
+    with sr.Microphone() as source:
+        print("Speak...")
+        audio = rObject.listen(source, phrase_time_limit=10000000000000000000000000000)
+
+        text = rObject.recognize_google(audio, language='en-US')
+        print("You : ", text)
+
+        if text == "Alaska":
+            driver_code()
