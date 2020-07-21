@@ -1,0 +1,70 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "I'm leaving", "Bye fucker", "bye", "bai", "bye bye"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!", "Have a good day!", "Yeah, you better leave.", "Awww :("],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?", "how old is this bot"],
+         "responses": ["I am 18 years old!", "18 years young!", "I am not a day under 18!", "I am not a day over 18!"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?", "what yo name", "tell me your name", "bot what is your name"],
+         "responses": ["Soy Alaska", "I'm Alaska", "meum nomen est Alaska"],
+         "context_set": ""
+        },
+        {"tag": "shop",
+         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat", "I want food"],
+         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!", "I sell candy. Come into my van first tho."],
+         "context_set": ""
+        },
+        {"tag": "hours",
+         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
+         "responses": ["We are open 7am-4pm Monday-Friday!", "Why are you even asking me this question lmao (I'm open 7am-4pm Monday-Friday)."],
+         "context_set": ""
+        },
+        {"tag": "hungry",
+        "patterns": ["I'm hungry", "hungry", "Mans is hungry", "I'm so hungry"],
+        "responses": ["Fat man.", "Ok then eat food.", "Bad. You're so fat lmao"],
+        "context_set": ""
+        },
+        {"tag": "insult",
+        "patterns": ["Tell me an insult", "Insult me", "Bot insult me"],
+        "responses": ["Fat.", "Gay ass.", "You're Literally a boomer.", "Bad.", "You're bad at school lmao." ],
+        "context_set": ""
+        },
+        {"tag": "compliment",
+        "patterns": ["Compliment me", "Complimentma", "Bot compliment me"],
+        "responses": ["Your personality shines brighter than the sun!", "You're the best man!", "If I was a whamen I would rate you 10/10 IGN do it again", "You're very smart", "You're good at minecraft", "You're amazing at math", "You make me smile!", "You are certified NOT a bot!!"],
+        "context_set": ""
+        },
+        {"tag": "minecraft",
+        "patterns": ["How good am I at minecraft", "Am I good at minecraft?", "Bot minecraft me", "Minecraft", "Minceraft"],
+        "responses": ["You're a god at minecraft just like stimpy!", "Your FKDR is over 9000!!", "Your pvp skills are godlike!", "You clutch bedwars games on the daily.", "You're good at minecraft", "Kinda bad ngl", "You cannot pvp for the life of you lmao bad", "You're just as bad as the kid Steve_the_noob1. That kid sucks at minecraft holy heck (totally not Steve_the_noob1 writing this rn)."],
+        "context_set": ""
+        },
+        {"tag": "depression",
+        "patterns": ["I'm depressed", "I have depression", "depression", "depressed", "why am i depressed"],
+        "responses": ["It's ok man you can do it!", "Maybe just rest a little.", "I'm a bot, so I don't have feelings, but I guess just talk to someone?", "You are so good!! Why are you depressed?", "You have a big brain ngl"],
+        "context_set": ""
+        },
+        {"tag": "history",
+        "patterns": ["History", "WW2", "World War", "Donald", "United States", "US", "Historical"],
+        "responses": ["https://reddit.com/r/historymemes"],
+        "context_set": ""
+        },
+        {"tag": "teacher",
+        "patterns": ["Best teacher", "teacher", "st. mark's, school"],
+        "responses": ["The best teacher is Steckler Obviously", "idk what a teacher is I'm a bot", "Janis Oprea is the best teacher at SM.", "Brandenburg is the best teacher at school.", "School is for cool kids.", "The best office in school is the lower school office."],
+        "context_set": ""
+        }
+
+
+   ]
+}
